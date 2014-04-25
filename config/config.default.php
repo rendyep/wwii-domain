@@ -1,6 +1,6 @@
 <?php
 
-return array_merge(array(
+$config = array(
     "database" => array(
         "driver" => "driver",
         "host" => "localhost",
@@ -18,4 +18,11 @@ return array_merge(array(
         __DIR__ . "/orm/mappings/xml/wwii/hrd/karyawan",
         __DIR__ . "/orm/mappings/xml/wwii/hrd/cuti",
     ),
-), include('config.sensitive.php'));
+);
+
+
+if (file_exists(__DIR__ . '/config.sensitive.php')) {
+    $config = array_merge($config, include(__DIR__ . '/config.sensitive.php'));
+}
+
+return $config;
