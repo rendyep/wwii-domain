@@ -1,0 +1,77 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity name="WWII\Domain\Hrd\Cuti\MasterCuti" table="hrd_cuti_master_cuti">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="nik"
+            column="nik"
+            type="string"
+            length="20" />
+
+        <field
+            name="namaKaryawan"
+            column="nama_karyawan"
+            type="string"
+            length="50" />
+
+        <field
+            name="departemen"
+            column="departemen"
+            type="string"
+            length="50" />
+
+        <field
+            name="totalLimit"
+            column="total_limit"
+            type="integer" />
+
+        <field
+            name="tanggalBerlaku"
+            column="tanggal_berlaku"
+            type="date" />
+
+        <field
+            name="tanggalKadaluarsa"
+            column="tanggal_kadaluarsa"
+            type="date" />
+
+        <one-to-one
+            field="perpanjanganCuti"
+            target-entity="WWII\Domain\Hrd\Cuti\PerpanjanganCuti"
+            mapped-by="masterCuti">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-one>
+
+        <one-to-one
+            field="child"
+            target-entity="WWII\Domain\Hrd\Cuti\MasterCuti"
+            mapped-by="parent">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-one>
+
+        <one-to-one
+            field="parent"
+            target-entity="WWII\Domain\Hrd\Cuti\MasterCuti"
+            inversed-by="child" />
+
+        <one-to-many
+            field="pengambilanCuti"
+            target-entity="WWII\Domain\Hrd\Cuti\PengambilanCuti"
+            mapped-by="masterCuti">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-many>
+
+    </entity>
+</doctrine-mapping>

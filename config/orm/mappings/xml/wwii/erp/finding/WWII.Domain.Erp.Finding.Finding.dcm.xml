@@ -1,0 +1,42 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity name="WWII\Domain\Erp\Finding\Finding" table="erp_finding">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="tanggal"
+            column="tanggal"
+            type="date" />
+
+        <field
+            name="kejadian"
+            column="kejadian"
+            type="string" />
+
+        <field
+            name="tindakan"
+            column="tindakan"
+            type="string"
+            nullable="true" />
+
+        <field
+            name="pelaksana"
+            column="pelaksana"
+            type="string" />
+
+        <one-to-many
+            field="findingPhotos"
+            target-entity="WWII\Domain\Erp\Finding\FindingPhoto"
+            mapped-by="finding">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-many>
+
+    </entity>
+</doctrine-mapping>

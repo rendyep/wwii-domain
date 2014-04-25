@@ -1,0 +1,37 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity name="WWII\Domain\Hrd\Cuti\PengambilanCuti" table="hrd_cuti_pengambilan_cuti">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="tanggalAwal"
+            column="tanggal_awal"
+            type="date" />
+
+        <field
+            name="tanggalAkhir"
+            column="tanggal_akhir"
+            type="date" />
+
+        <field
+            name="keterangan"
+            column="keterangan"
+            type="text" />
+
+        <field
+            name="pelaksana"
+            column="pelaksana"
+            type="string" />
+
+        <many-to-one
+            field="masterCuti"
+            target-entity="WWII\Domain\Hrd\Cuti\MasterCuti"
+            inversed-by="pengambilanCuti" />
+
+    </entity>
+</doctrine-mapping>

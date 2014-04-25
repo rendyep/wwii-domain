@@ -1,0 +1,138 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity name="WWII\Domain\Hrd\Pelamar\Pelamar" table="hrd_pelamar">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="namaLengkap"
+            column="nama_lengkap"
+            type="string"
+            length="100" />
+
+        <field
+            name="namaPanggilan"
+            column="nama_panggilan"
+            type="string"
+            length="100"
+            nullable="true" />
+
+        <field
+            name="jenisKelamin"
+            column="jenis_kelamin"
+            type="string"
+            length="9" />
+
+        <field
+            name="tanggalLahir"
+            column="tanggal_lahir"
+            type="date" />
+
+        <field
+            name="agama"
+            column="agama"
+            type="string"
+            length="10" />
+
+        <field
+            name="statusPerkawinan"
+            column="status_perkawinan"
+            type="string"
+            length="10" />
+
+        <field
+            name="pendidikan"
+            column="pendidikan"
+            type="string"
+            length="10" />
+
+        <field
+            name="jurusan"
+            column="jurusan"
+            type="string"
+            length="100"
+            nullable="true" />
+
+        <field
+            name="alamat"
+            column="alamat"
+            type="string" />
+
+        <field
+            name="kota"
+            column="kota"
+            type="string"
+            length="100" />
+
+        <field
+            name="kodePos"
+            column="kode_pos"
+            type="string"
+            length="10"
+            nulable="true" />
+
+        <field
+            name="telepon"
+            column="telepon"
+            type="string"
+            length="20"
+            nullable="true" />
+
+        <field
+            name="ponsel"
+            column="ponsel"
+            type="string"
+            length="20"
+            nullable="true" />
+
+        <field
+            name="ponselLain"
+            column="ponsel_lain"
+            type="string"
+            length="20"
+            nullable="true" />
+
+        <field
+            name="email"
+            column="email"
+            type="string"
+            length="20"
+            nullable="true" />
+
+        <field
+            name="npwp"
+            column="npwp"
+            type="string"
+            length="20"
+            nullable="true" />
+
+        <field
+            name="photo"
+            column="photo"
+            type="string"
+            nullable="true" />
+
+        <one-to-many
+            field="filePelamar"
+            target-entity="WWII\Domain\Hrd\Pelamar\FilePelamar"
+            mapped-by="pelamar">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-many>
+
+        <one-to-one
+            field="detailPelamar"
+            target-entity="WWII\Domain\Hrd\Pelamar\DetailPelamar"
+            mapped-by="pelamar">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-one>
+
+    </entity>
+</doctrine-mapping>

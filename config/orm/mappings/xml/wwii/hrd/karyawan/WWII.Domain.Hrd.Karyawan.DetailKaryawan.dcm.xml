@@ -1,0 +1,65 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity name="WWII\Domain\Hrd\Karyawan\DetailKaryawan" table="hrd_karyawan_detail">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="nik"
+            column="nik"
+            type="string"
+            length="50" />
+
+        <field
+            name="jabatan"
+            column="jabatan"
+            type="string"
+            length="50" />
+
+        <field
+            name="departemen"
+            column="departemen"
+            type="string"
+            length="50" />
+
+        <field
+            name="status"
+            column="status"
+            type="string"
+            length="10" />
+
+        <field
+            name="tanggalAwalKontrakKerja"
+            column="tanggal_awal_kontrak_kerja"
+            type="date"
+            nullable="true" />
+
+        <field
+            name="tanggalAkhirKontrakKerja"
+            column="tanggal_akhir_kontrak_kerja"
+            type="date"
+            nullable="true" />
+
+
+        <field
+            name="tanggalMasukKerja"
+            column="tanggal_masuk_kerja"
+            type="date" />
+
+        <field
+            name="tanggalKeluarKerja"
+            column="tanggal_keluar_kerja"
+            type="date"
+            nullable="true" />
+
+        <one-to-one
+            field="karyawan"
+            target-entity="WWII\Domain\Hrd\Karyawan\Karyawan"
+            inversed-by="detailKaryawan" />
+
+    </entity>
+</doctrine-mapping>

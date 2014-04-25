@@ -1,0 +1,105 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity name="WWII\Domain\Erp\ItInventory\Komputer" table="inv_komputer">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="nomorSeri"
+            column="no_seri"
+            type="string"
+            length="100"
+            nullable="true" />
+
+        <field
+            name="ip"
+            column="ip"
+            type="string"
+            length="15"
+            nullable="true" />
+
+        <field
+            name="mac"
+            column="mac"
+            type="string"
+            length="30" />
+
+        <field
+            name="cpu"
+            column="cpu"
+            type="string"
+            length="100"
+            nullable="true" />
+
+        <field
+            name="hardDisk"
+            column="hd"
+            type="string"
+            length="100"
+            nullable="true" />
+
+        <field
+            name="ram"
+            column="ram"
+            type="string"
+            length="100"
+            nullable="true" />
+
+        <field
+            name="lcd"
+            column="lcd"
+            type="string"
+            length="100"
+            nullable="true" />
+
+        <field
+            name="opticalDrive"
+            column="optical_drive"
+            type="string"
+            length="100"
+            nullable="true" />
+
+        <field
+            name="os"
+            column="os"
+            type="string"
+            length="100" />
+
+        <field
+            name="email"
+            column="email"
+            type="string"
+            length="100"
+            nullable="true" />
+
+        <field
+            name="tahun"
+            column="tahun"
+            type="integer"
+            nullable="true" />
+
+        <field
+            name="user"
+            column="user"
+            type="string"
+            length="50" />
+
+        <field
+            name="userAccount"
+            column="user_account"
+            type="string"
+            length="50"
+            nullable="true" />
+
+        <field
+            name="lokasi"
+            column="lokasi"
+            type="string"
+            length="50" />
+
+    </entity>
+</doctrine-mapping>
