@@ -101,7 +101,7 @@ class MasterCuti
         $now = new \DateTime();
         $now = new \DateTime($now->format('Y-m-d'));
 
-        return ($this->tanggalKadaluarsa < $now);
+        return ($this->tanggalKadaluarsa <$now);
     }
 
     public function getTotalLimit()
@@ -114,7 +114,7 @@ class MasterCuti
         $sisaLimit = 0;
 
         foreach ($this->pengambilanCuti as $pengambilanCuti) {
-            $sisaLimit += $pengambilanCuti->getJumlah();
+            $sisaLimit += $pengambilanCuti->getJumlahHari();
         }
 
         return $this->totalLimit - $sisaLimit;
