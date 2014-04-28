@@ -59,7 +59,7 @@ class PengambilanCuti
         $end   = $this->tanggalAkhir;
         $diff  = $start->diff($end);
 
-        return $diff->format('%a');
+        return $diff->format('%a') + 1;
     }
 
     public function setTanggalInput(\DateTime $tanggalInput)
