@@ -23,8 +23,7 @@
         <field
             name="departemen"
             column="departemen"
-            type="string"
-            length="50" />
+            type="text" />
 
         <field
             name="totalLimit"
