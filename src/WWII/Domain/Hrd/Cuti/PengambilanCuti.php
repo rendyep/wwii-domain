@@ -12,6 +12,8 @@ class PengambilanCuti
 
     protected $keterangan;
 
+    protected $tanggalInput;
+
     protected $pelaksana;
 
     protected $masterCuti;
@@ -58,6 +60,16 @@ class PengambilanCuti
         $diff  = $start->diff($end);
 
         return $diff->format('%a');
+    }
+
+    public function setTanggalInput(\DateTime $tanggalInput)
+    {
+        $this->tanggalInput = $tanggalInput;
+    }
+
+    public function getTanggalInput()
+    {
+        return $this->tanggalInput;
     }
 
     public function setPelaksana($pelaksana)

@@ -24,6 +24,11 @@
             type="text" />
 
         <field
+            name="tanggalInput"
+            column="tanggal_input"
+            type="datetime" />
+
+        <field
             name="pelaksana"
             column="pelaksana"
             type="string" />
