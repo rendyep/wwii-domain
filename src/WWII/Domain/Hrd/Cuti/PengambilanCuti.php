@@ -51,6 +51,15 @@ class PengambilanCuti
         return $this->keterangan;
     }
 
+    public function getJumlahHari()
+    {
+        $start = $this->tanggalAwal;
+        $end   = $this->tanggalAkhir;
+        $diff  = $start->diff($end);
+
+        return $diff->format('%a');
+    }
+
     public function setPelaksana($pelaksana)
     {
         $this->pelaksana = $pelaksana;
