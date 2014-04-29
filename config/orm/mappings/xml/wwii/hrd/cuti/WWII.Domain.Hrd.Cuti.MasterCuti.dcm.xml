@@ -26,6 +26,11 @@
             type="text" />
 
         <field
+            name="tanggalMasuk"
+            column="tanggal_masuk"
+            type="date" />
+
+        <field
             name="totalLimit"
             column="total_limit"
             type="integer" />

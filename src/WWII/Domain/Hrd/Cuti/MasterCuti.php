@@ -12,6 +12,8 @@ class MasterCuti
 
     protected $departemen;
 
+    protected $tanggalMasuk;
+
     protected $totalLimit = 12;
 
     protected $tanggalBerlaku;
@@ -64,6 +66,16 @@ class MasterCuti
     public function getDepartemen()
     {
         return $this->departemen;
+    }
+
+    public function setTanggalMasuk(\DateTime $tanggalMasuk)
+    {
+        $this->tanggalMasuk = $tanggalMasuk;
+    }
+
+    public function getTanggalMasuk()
+    {
+        return $this->tanggalMasuk;
     }
 
     public function setLimit($limit)
