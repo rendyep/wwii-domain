@@ -16,7 +16,8 @@
         <field
             name="maxLoot"
             column="max_loot"
-            type="integer" />
+            type="integer"
+            nullable="true" />
 
         <many-to-one
             field="level"

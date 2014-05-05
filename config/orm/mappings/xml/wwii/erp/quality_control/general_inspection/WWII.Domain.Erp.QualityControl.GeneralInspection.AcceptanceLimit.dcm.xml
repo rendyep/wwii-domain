@@ -4,8 +4,8 @@
         http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
 
     <entity
-        name="WWII\Domain\Erp\QualityControl\GeneralInspection\AcceptanceLimnit"
-        table="qc_general_inspection_acceptance_index">
+        name="WWII\Domain\Erp\QualityControl\GeneralInspection\AcceptanceLimit"
+        table="qc_general_inspection_acceptance_limit">
         <id name="id" type="integer">
             <generator strategy="AUTO" />
         </id>
@@ -16,7 +16,7 @@
 
         <field
             name="sampleSize"
-            column="sampleSize"
+            column="sample_size"
             type="integer" />
 
         <many-to-one
@@ -30,3 +30,4 @@
 
     </entity>
 </doctrine-mapping>
+
