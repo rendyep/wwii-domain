@@ -14,6 +14,7 @@ $config = array(
         __DIR__ . "/orm/mappings/xml/wwii/erp/finding",
         __DIR__ . "/orm/mappings/xml/wwii/erp/it_inventory",
         __DIR__ . "/orm/mappings/xml/wwii/erp/quality_control",
+        __DIR__ . "/orm/mappings/xml/wwii/erp/quality_control/general_inspection",
         __DIR__ . "/orm/mappings/xml/wwii/hrd/pelamar",
         __DIR__ . "/orm/mappings/xml/wwii/hrd/karyawan",
         __DIR__ . "/orm/mappings/xml/wwii/hrd/cuti",
