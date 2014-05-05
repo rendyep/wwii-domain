@@ -16,12 +16,12 @@
         <field
             name="kejadian"
             column="kejadian"
-            type="string" />
+            type="text" />
 
         <field
             name="tindakan"
             column="tindakan"
-            type="string"
+            type="text"
             nullable="true" />
 
         <field
