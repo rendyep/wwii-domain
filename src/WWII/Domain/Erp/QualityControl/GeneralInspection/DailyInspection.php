@@ -14,11 +14,11 @@ class DailyInspection
 
     protected $staffQc;
 
-    protected $dailyInspectionItem;
+    protected $dailyInspectionTime;
 
     public function __construct()
     {
-        $this->dailyInspectionItem = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->dailyInspectionTime = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     public function getId()
@@ -66,19 +66,19 @@ class DailyInspection
         return $this->staffQc;
     }
 
-    public function addDailyInspectionItem(DailyInspectionItem $dailyInspectionItem)
+    public function addDailyInspectionTime(DailyInspectionTime $dailyInspectionTime)
     {
-        $dailyInspectionItem->setDailyInspection($this);
-        $this->dailyInspectionItem->add($dailyInspectionItem);
+        $dailyInspectionTime->setDailyInspection($this);
+        $this->dailyInspectionTime->add($dailyInspectionTime);
     }
 
-    public function removeDailyInspectionItem(DailyInspectionItem $dailyInspectionItem)
+    public function removeDailyInspectionTime(DailyInspectionT $dailyInspectionTime)
     {
-        $this->dailyInspectionItem->removeElement($dailyInspectionItem);
+        $this->dailyInspectionTime->removeElement($dailyInspectionTime);
     }
 
-    public function getDailyInspectionItem()
+    public function getDailyInspectionTime()
     {
-        return $this->dailyInspectionItem;
+        return $this->dailyInspectionTime;
     }
 }

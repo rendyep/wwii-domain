@@ -11,11 +11,6 @@
         </id>
 
         <field
-            name="waktuInspeksi"
-            column="waktu_inspeksi"
-            type="datetime" />
-
-        <field
             name="kodeProduk"
             column="kode_produk"
             type="string" />
@@ -106,8 +101,8 @@
             type="integer" />
 
         <many-to-one
-            field="dailyInspection"
-            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspection"
+            field="dailyInspectionTime"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspectionTime"
             inversed-by="dailyInspectionItem" />
 
     </entity>

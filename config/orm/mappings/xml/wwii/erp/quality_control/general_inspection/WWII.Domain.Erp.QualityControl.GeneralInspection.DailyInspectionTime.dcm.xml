@@ -1,0 +1,38 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity
+        name="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspectionTime"
+        table="qc_general_inspection_daily_inspection_time">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="waktuInspeksi"
+            column="waktu_inspeksi"
+            type="datetime" />
+
+        <one-to-many
+            field="dailyInspectionItem"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspectionItem"
+            mapped-by="dailyInspectionTime"
+            orphan-removal="true">
+            <cascade>
+                <cascade-all />
+            </cascade>
+            <order-by>
+                <order-by-field name="id" direction="ASC" />
+            </order-by>
+        </one-to-many>
+
+        <many-to-one
+            field="dailyInspection"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspection"
+            inversed-by="dailyInspectionTime" />
+
+    </entity>
+</doctrine-mapping>
+

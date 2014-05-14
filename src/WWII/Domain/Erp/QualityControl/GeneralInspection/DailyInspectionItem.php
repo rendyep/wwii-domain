@@ -6,8 +6,6 @@ class DailyInspectionItem
 {
     protected $id;
 
-    protected $waktuInspeksi;
-
     protected $kodeProduk;
 
     protected $namaProduk;
@@ -44,7 +42,7 @@ class DailyInspectionItem
 
     protected $jumlahItemKekurangan;
 
-    protected $dailyInspection;
+    protected $dailyInspectionTime;
 
     public function getId()
     {
@@ -84,6 +82,11 @@ class DailyInspectionItem
     public function setJumlahInspeksi($jumlahInspeksi)
     {
         $this->jumlahInspeksi = $jumlahInspeksi;
+    }
+
+    public function getJumlahInspeksi()
+    {
+        return $this->jumlahInspeksi;
     }
 
     public function setJumlahItemKainTergores($jumlahItemKainTergores)
@@ -236,24 +239,24 @@ class DailyInspectionItem
         return $this->jumlahItemKekurangan;
     }
 
-    public function getTotalItemBuruk()
+    public function getJumlahTotalItemBuruk()
     {
-        $jumlahItemBuruk = $this->jumlahItemKainTergores + $this->jumlahItemTidakPresisi
+        $jumlahTotalItemBuruk = $this->jumlahItemKainTergores + $this->jumlahItemTidakPresisi
             + $this->jumlahItemSalahPosisiLubang + $this->jumlahItemSalahUkuran + $this->jumlahItemTergores
             + $this->jumlahItemKelebihanLem + $this->jumlahItemStrukturLonggar + $this->jumlahItemCoverTerpotong
             + $this->jumlahItemRetak + $this->jumlahItemSandingBuruk + $this->jumlahItemPakuKeluar
             + $this->jumlahItemLemDegumming + $this->jumlahItemGap + $this->jumlahItemBurukLainnya;
 
-        return $totalItemBuruk;
+        return $jumlahTotalItemBuruk;
     }
 
-    public function setDailyInspection(DailyInspection $dailyInspection)
+    public function setDailyInspectionTime(DailyInspectionTime $dailyInspectionTime)
     {
-        $this->dailyInspection = $dailyInspection;
+        $this->dailyInspectionTime = $dailyInspectionTime;
     }
 
-    public function getDailyInspection()
+    public function getDailyInspectionTime()
     {
-        return $this->dailyInspection;
+        return $this->dailyInspectionTime;
     }
 }

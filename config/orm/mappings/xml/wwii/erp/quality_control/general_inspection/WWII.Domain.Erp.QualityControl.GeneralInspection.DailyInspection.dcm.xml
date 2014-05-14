@@ -31,8 +31,8 @@
             type="string" />
 
         <one-to-many
-            field="dailyInspectionItem"
-            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspectionItem"
+            field="dailyInspectionTime"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspectionTime"
             mapped-by="dailyInspection"
             orphan-removal="true">
             <cascade>
