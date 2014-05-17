@@ -56,6 +56,6 @@ class LotRange
 
     public function getCategory()
     {
-        return $this->category();
+        return $this->category;
     }
 }
