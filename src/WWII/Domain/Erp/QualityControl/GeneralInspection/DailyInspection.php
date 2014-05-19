@@ -72,7 +72,7 @@ class DailyInspection
         $this->dailyInspectionTime->add($dailyInspectionTime);
     }
 
-    public function removeDailyInspectionTime(DailyInspectionT $dailyInspectionTime)
+    public function removeDailyInspectionTime(DailyInspectionTime $dailyInspectionTime)
     {
         $this->dailyInspectionTime->removeElement($dailyInspectionTime);
     }
