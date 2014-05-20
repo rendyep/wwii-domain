@@ -126,7 +126,9 @@ class MasterCuti
         $sisaLimit = 0;
 
         foreach ($this->pengambilanCuti as $pengambilanCuti) {
-            $sisaLimit += $pengambilanCuti->getJumlahHari();
+            if ($pengambilanCuti->isDisetujui()) {
+                $sisaLimit += $pengambilanCuti->getJumlahHari();
+            }
         }
 
         return $this->totalLimit - $sisaLimit;

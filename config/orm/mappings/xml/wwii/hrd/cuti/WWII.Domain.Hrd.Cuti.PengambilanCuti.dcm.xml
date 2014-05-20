@@ -33,6 +33,11 @@
             column="pelaksana"
             type="string" />
 
+        <field
+            name="disetujui"
+            column="disetujui"
+            type="boolean" />
+
         <many-to-one
             field="masterCuti"
             target-entity="WWII\Domain\Hrd\Cuti\MasterCuti"

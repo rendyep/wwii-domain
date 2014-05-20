@@ -16,6 +16,8 @@ class PengambilanCuti
 
     protected $pelaksana;
 
+    protected $disetujui;
+
     protected $masterCuti;
 
     public function getId()
@@ -75,6 +77,16 @@ class PengambilanCuti
     public function setPelaksana($pelaksana)
     {
         $this->pelaksana = $pelaksana;
+    }
+
+    public function setDisetujui($disetujui)
+    {
+        $this->disetujui = $disetujui;
+    }
+
+    public function isDisetujui()
+    {
+        return $this->disetujui;
     }
 
     public function setMasterCuti(MasterCuti $masterCuti)
