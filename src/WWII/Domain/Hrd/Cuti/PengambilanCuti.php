@@ -16,7 +16,7 @@ class PengambilanCuti
 
     protected $pelaksana;
 
-    protected $disetujui;
+    protected $disetujui = false;
 
     protected $masterCuti;
 
