@@ -113,7 +113,13 @@ class MasterCuti
         $now = new \DateTime();
         $now = new \DateTime($now->format('Y-m-d'));
 
-        return ($this->tanggalKadaluarsa <$now);
+        if ($this->tanggalKadaluarsa < $now) {
+            if ($this->getPerpanjanganCuti()->getTanggalKadaluarsa() < $now) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public function getTotalLimit()
