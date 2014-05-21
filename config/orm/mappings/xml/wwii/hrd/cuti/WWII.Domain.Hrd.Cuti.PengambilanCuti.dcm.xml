@@ -38,6 +38,12 @@
             column="disetujui"
             type="boolean" />
 
+        <field
+            name="tanggalApprovisasi"
+            column="tanggal_approvisasi"
+            type="datetime"
+            nullable="true" />
+
         <many-to-one
             field="masterCuti"
             target-entity="WWII\Domain\Hrd\Cuti\MasterCuti"

@@ -18,6 +18,8 @@ class PengambilanCuti
 
     protected $disetujui = false;
 
+    protected $tanggalApprovisasi;
+
     protected $masterCuti;
 
     public function getId()
@@ -79,9 +81,18 @@ class PengambilanCuti
         $this->pelaksana = $pelaksana;
     }
 
+    public function getPelaksana()
+    {
+        return $this->pelaksana;
+    }
+
     public function setDisetujui($disetujui)
     {
         $this->disetujui = $disetujui;
+
+        if ($disetujui == false) {
+            $this->tanggalApprovisasi = null;
+        }
     }
 
     public function isDisetujui()
@@ -92,6 +103,16 @@ class PengambilanCuti
     public function setMasterCuti(MasterCuti $masterCuti)
     {
         $this->masterCuti = $masterCuti;
+    }
+
+    public function setTanggalApprovisasi(\DateTime $tanggalApprovisasi)
+    {
+        $this->tanggalApprovisasi = $tanggalApprovisasi;
+    }
+
+    public function getTanggalApprovisasi()
+    {
+        return $this->tanggalApprovisasi;
     }
 
     public function getMasterCuti()
