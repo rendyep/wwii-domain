@@ -13,8 +13,9 @@
         <field
             name="code"
             column="code"
-            type="string"
-            length="3" />
+            type="decimal"
+            scale="2"
+            precicion="2"  />
 
     </entity>
 </doctrine-mapping>

@@ -10,6 +10,12 @@ class DailyInspectionItem
 
     protected $namaProduk;
 
+    protected $inspectionLevel;
+
+    protected $acceptanceIndex;
+
+    protected $jumlahLot;
+
     protected $jumlahInspeksi;
 
     protected $jumlahItemKainTergores;
@@ -77,6 +83,36 @@ class DailyInspectionItem
     public function getNamaProduk()
     {
         return $this->namaProduk;
+    }
+
+    public function setInspectionLevel($inspectionLevel)
+    {
+        $this->inspectionLevel = $inspectionLevel;
+    }
+
+    public function getInspectionLevel()
+    {
+        return $this->inspectionLevel;
+    }
+
+    public function setAcceptanceIndex($acceptanceIndex)
+    {
+        $this->acceptanceIndex = $acceptanceIndex;
+    }
+
+    public function getAcceptanceIndex()
+    {
+        return $this->acceptanceIndex;
+    }
+
+    public function setJumlahLot($jumlahLot)
+    {
+        $this->jumlahLot = $jumlahLot;
+    }
+
+    public function getJumlahLot()
+    {
+        return $this->jumlahLot;
     }
 
     public function setJumlahInspeksi($jumlahInspeksi)
