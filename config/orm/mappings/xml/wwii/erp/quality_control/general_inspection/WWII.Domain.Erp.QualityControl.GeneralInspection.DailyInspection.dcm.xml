@@ -17,7 +17,7 @@
 
         <field
             name="group"
-            column="group"
+            column="`group`"
             type="string" />
 
         <field
