@@ -2,23 +2,21 @@
 
 namespace WWII\Domain\Erp\QualityControl\GeneralInspection;
 
-class DailyInspection
+class FinishingInspection
 {
     protected $id;
 
     protected $tanggalInspeksi;
 
-    protected $group;
-
     protected $lokasi;
 
     protected $staffQc;
 
-    protected $dailyInspectionTime;
+    protected $finishingInspectionTime;
 
     public function __construct()
     {
-        $this->dailyInspectionTime = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->finishingInspectionTime = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     public function getId()
@@ -34,16 +32,6 @@ class DailyInspection
     public function getTanggalInspeksi()
     {
         return $this->tanggalInspeksi;
-    }
-
-    public function setGroup($group)
-    {
-        $this->group = $group;
-    }
-
-    public function getGroup()
-    {
-        return $this->group;
     }
 
     public function setLokasi($lokasi)
@@ -66,19 +54,19 @@ class DailyInspection
         return $this->staffQc;
     }
 
-    public function addDailyInspectionTime(DailyInspectionTime $dailyInspectionTime)
+    public function addFinishingInspectionTime(FinishingInspectionTime $finishingInspectionTime)
     {
-        $dailyInspectionTime->setDailyInspection($this);
-        $this->dailyInspectionTime->add($dailyInspectionTime);
+        $finishingInspectionTime->setFinishingInspection($this);
+        $this->finishingInspectionTime->add($finishingInspectionTime);
     }
 
-    public function removeDailyInspectionTime(DailyInspectionTime $dailyInspectionTime)
+    public function removeFinishingInspectionTime(FinishingInspectionTime $finishingInspectionTime)
     {
-        $this->dailyInspectionTime->removeElement($dailyInspectionTime);
+        $this->finishingInspectionTime->removeElement($finishingInspectionTime);
     }
 
-    public function getDailyInspectionTime()
+    public function getFinishingInspectionTime()
     {
-        return $this->dailyInspectionTime;
+        return $this->finishingInspectionTime;
     }
 }

@@ -1,0 +1,146 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity
+        name="WWII\Domain\Erp\QualityControl\GeneralInspection\PackagingInspectionItem"
+        table="qc_general_inspection_packaging_inspection_item">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="kodeProduk"
+            column="kode_produk"
+            type="string" />
+
+        <field
+            name="namaProduk"
+            column="nama_produk"
+            type="string" />
+
+        <field
+            name="inspectionLevel"
+            column="inspectionLevel"
+            type="string" />
+
+        <field
+            name="acceptanceIndex"
+            column="acceptance_index"
+            type="decimal"
+            scale="2"
+            precicion="2" />
+
+        <field
+            name="jumlahLot"
+            column="jumlah_lot"
+            type="integer" />
+
+        <field
+            name="jumlahInspeksi"
+            column="jumlah_inspeksi"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahFlowProses"
+            column="jumlah_item_salah_flow_proses"
+            type="integer" />
+
+        <field
+            name="jumlahItemKualitasBuruk"
+            column="jumlah_item_kualitas_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahKualitas"
+            column="jumlah_item_salah_kualitas"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahPosisiLubang"
+            column="jumlah_item_salah_posisi_lubang"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahUkuran"
+            column="jumlah_item_salah_ukuran"
+            type="integer" />
+
+        <field
+            name="jumlahItemBekasGoresanPisau"
+            column="jumlah_item_bekas_goresan_pisau"
+            type="integer" />
+
+        <field
+            name="jumlahItemSobek"
+            column="jumlah_item_sobek"
+            type="integer" />
+
+        <field
+            name="jumlahItemRetak"
+            column="jumlah_item_retak"
+            type="integer" />
+
+        <field
+            name="jumlahItemHitam"
+            column="jumlah_item_hitam"
+            type="integer" />
+
+        <field
+            name="jumlahItemSandingBuruk"
+            column="jumlah_item_sanding_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemGoresanTekanan"
+            column="jumlah_item_goresan_tekanan"
+            type="integer" />
+
+        <field
+            name="jumlahItemPakuKeluar"
+            column="jumlah_item_paku_keluar"
+            type="integer" />
+
+        <field
+            name="jumlahItemBerdiriBuruk"
+            column="jumlah_item_berdiri_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemPerbaikanBuruk"
+            column="jumlah_item_perbaikan_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemLemDegumming"
+            column="jumlah_item_lem_degumming"
+            type="integer" />
+        <field
+            name="jumlahItemKelebihanLem"
+            column="jumlah_item_kelebihan_lem"
+            type="integer" />
+
+        <field
+            name="jumlahItemSuhuTerlaluTinggi"
+            column="jumlah_item_suhu_terlalu_tinggi"
+            type="integer" />
+
+        <field
+            name="jumlahItemBurukLainnya"
+            column="jumlah_item_buruk_lainnya"
+            type="integer" />
+
+        <field
+            name="jumlahItemKekurangan"
+            column="jumlah_item_kekurangan"
+            type="integer" />
+
+        <many-to-one
+            field="packagingInspectionTime"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\PackagingInspectionTime"
+            inversed-by="packagingInspectionItem" />
+
+    </entity>
+</doctrine-mapping>
+

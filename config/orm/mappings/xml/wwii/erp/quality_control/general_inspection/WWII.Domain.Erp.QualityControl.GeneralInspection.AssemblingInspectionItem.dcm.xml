@@ -1,0 +1,127 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity
+        name="WWII\Domain\Erp\QualityControl\GeneralInspection\AssemblingInspectionItem"
+        table="qc_general_inspection_assembling_inspection_item">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="kodeProduk"
+            column="kode_produk"
+            type="string" />
+
+        <field
+            name="namaProduk"
+            column="nama_produk"
+            type="string" />
+
+        <field
+            name="inspectionLevel"
+            column="inspectionLevel"
+            type="string" />
+
+        <field
+            name="acceptanceIndex"
+            column="acceptance_index"
+            type="decimal"
+            scale="2"
+            precicion="2" />
+
+        <field
+            name="jumlahLot"
+            column="jumlah_lot"
+            type="integer" />
+
+        <field
+            name="jumlahInspeksi"
+            column="jumlah_inspeksi"
+            type="integer" />
+
+        <field
+            name="jumlahItemKainTergores"
+            column="jumlah_item_kain_tergores"
+            type="integer" />
+
+        <field
+            name="jumlahItemTidakPresisi"
+            column="jumlah_item_tidak_presisi"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahPosisiLubang"
+            column="jumlah_item_salah_posisi_lubang"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahUkuran"
+            column="jumlah_item_salah_ukuran"
+            type="integer" />
+
+        <field
+            name="jumlahItemTergores"
+            column="jumlah_item_tergores"
+            type="integer" />
+
+        <field
+            name="jumlahItemKelebihanLem"
+            column="jumlah_item_kelebihan_lem"
+            type="integer" />
+
+        <field
+            name="jumlahItemStrukturLonggar"
+            column="jumlah_item_struktur_longgar"
+            type="integer" />
+
+        <field
+            name="jumlahItemCoverTerpotong"
+            column="jumlah_item_cover_terpotong"
+            type="integer" />
+
+        <field
+            name="jumlahItemRetak"
+            column="jumlah_item_retak"
+            type="integer" />
+
+        <field
+            name="jumlahItemSandingBuruk"
+            column="jumlah_item_sanding_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemPakuKeluar"
+            column="jumlah_item_pakuKeluar"
+            type="integer" />
+
+        <field
+            name="jumlahItemLemDegumming"
+            column="jumlah_item_lem_degumming"
+            type="integer" />
+
+        <field
+            name="jumlahItemGap"
+            column="jumlah_item_gap"
+            type="integer" />
+
+        <field
+            name="jumlahItemBurukLainnya"
+            column="jumlah_item_buruk_lainnya"
+            type="integer" />
+
+        <field
+            name="jumlahItemKekurangan"
+            column="jumlah_item_kekurangan"
+            type="integer" />
+
+        <many-to-one
+            field="assemblingInspectionTime"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\AssemblingInspectionTime"
+            inversed-by="assemblingInspectionItem" />
+
+    </entity>
+</doctrine-mapping>
+

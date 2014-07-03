@@ -4,8 +4,8 @@
         http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
 
     <entity
-        name="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspectionItem"
-        table="qc_general_inspection_daily_inspection_item">
+        name="WWII\Domain\Erp\QualityControl\GeneralInspection\FinishingInspectionItem"
+        table="qc_general_inspection_finishing_inspection_item">
         <id name="id" type="integer">
             <generator strategy="AUTO" />
         </id>
@@ -43,18 +43,13 @@
             type="integer" />
 
         <field
-            name="jumlahItemKainTergores"
-            column="jumlah_item_kain_tergores"
+            name="jumlahItemTergores"
+            column="jumlah_item_tergores"
             type="integer" />
 
         <field
-            name="jumlahItemTidakPresisi"
-            column="jumlah_item_tidak_presisi"
-            type="integer" />
-
-        <field
-            name="jumlahItemSalahPosisiLubang"
-            column="jumlah_item_salah_posisi_lubang"
+            name="jumlahItemTerpolusi"
+            column="jumlah_item_terpolusi"
             type="integer" />
 
         <field
@@ -63,13 +58,23 @@
             type="integer" />
 
         <field
-            name="jumlahItemTergores"
-            column="jumlah_item_tergores"
+            name="jumlahItemKelebihanLem"
+            column="jumlah_item_kelebihan_lem"
             type="integer" />
 
         <field
-            name="jumlahItemKelebihanLem"
-            column="jumlah_item_kelebihan_lem"
+            name="jumlahItemKelebihanCat"
+            column="jumlah_item_kelebihan_cat"
+            type="integer" />
+
+        <field
+            name="jumlahItemWarna"
+            column="jumlah_item_warna"
+            type="integer" />
+
+        <field
+            name="jumlahItemBergelembung"
+            column="jumlah_item_bergelembung"
             type="integer" />
 
         <field
@@ -83,8 +88,8 @@
             type="integer" />
 
         <field
-            name="jumlahItemRetak"
-            column="jumlah_item_retak"
+            name="jumlahItemArahHorizontal"
+            column="jumlah_item_arah_horizontal"
             type="integer" />
 
         <field
@@ -94,12 +99,12 @@
 
         <field
             name="jumlahItemPakuKeluar"
-            column="jumlah_item_pakuKeluar"
+            column="jumlah_item_paku_keluar"
             type="integer" />
 
         <field
             name="jumlahItemLemDegumming"
-            column="jumlah_item_lem_degumming"
+            column="jumlah_item_lem_Degumming"
             type="integer" />
 
         <field
@@ -110,7 +115,7 @@
         <field
             name="jumlahItemBurukLainnya"
             column="jumlah_item_buruk_lainnya"
-            type="integer" /> />
+            type="integer" />
 
         <field
             name="jumlahItemKekurangan"
@@ -118,9 +123,9 @@
             type="integer" />
 
         <many-to-one
-            field="dailyInspectionTime"
-            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspectionTime"
-            inversed-by="dailyInspectionItem" />
+            field="finishingInspectionTime"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\FinishingInspectionTime"
+            inversed-by="finishingInspectionItem" />
 
     </entity>
 </doctrine-mapping>

@@ -4,8 +4,8 @@
         http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
 
     <entity
-        name="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspectionTime"
-        table="qc_general_inspection_daily_inspection_time">
+        name="WWII\Domain\Erp\QualityControl\GeneralInspection\AssemblingInspectionTime"
+        table="qc_general_inspection_assembling_inspection_time">
         <id name="id" type="integer">
             <generator strategy="AUTO" />
         </id>
@@ -16,9 +16,9 @@
             type="datetime" />
 
         <one-to-many
-            field="dailyInspectionItem"
-            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspectionItem"
-            mapped-by="dailyInspectionTime"
+            field="assemblingInspectionItem"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\AssemblingInspectionItem"
+            mapped-by="assemblingInspectionTime"
             orphan-removal="true">
             <cascade>
                 <cascade-all />
@@ -29,9 +29,9 @@
         </one-to-many>
 
         <many-to-one
-            field="dailyInspection"
-            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\DailyInspection"
-            inversed-by="dailyInspectionTime" />
+            field="assemblingInspection"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\AssemblingInspection"
+            inversed-by="assemblingInspectionTime" />
 
     </entity>
 </doctrine-mapping>

@@ -2,7 +2,7 @@
 
 namespace WWII\Domain\Erp\QualityControl\GeneralInspection;
 
-class DailyInspectionItem
+class FinishingInspectionItem
 {
     protected $id;
 
@@ -18,23 +18,25 @@ class DailyInspectionItem
 
     protected $jumlahInspeksi;
 
-    protected $jumlahItemKainTergores;
+    protected $jumlahItemTergores;
 
-    protected $jumlahItemTidakPresisi;
-
-    protected $jumlahItemSalahPosisiLubang;
+    protected $jumlahItemTerpolusi;
 
     protected $jumlahItemSalahUkuran;
 
-    protected $jumlahItemTergores;
-
     protected $jumlahItemKelebihanLem;
+
+    protected $jumlahItemKelebihanCat;
+
+    protected $jumlahItemWarna;
+
+    protected $jumlahItemBergelembung;
 
     protected $jumlahItemStrukturLonggar;
 
     protected $jumlahItemCoverTerpotong;
 
-    protected $jumlahItemRetak;
+    protected $jumlahItemArahHorizontal;
 
     protected $jumlahItemSandingBuruk;
 
@@ -48,7 +50,7 @@ class DailyInspectionItem
 
     protected $jumlahItemKekurangan;
 
-    protected $dailyInspectionTime;
+    protected $finishingInspectionTime;
 
     public function getId()
     {
@@ -125,34 +127,24 @@ class DailyInspectionItem
         return $this->jumlahInspeksi;
     }
 
-    public function setJumlahItemKainTergores($jumlahItemKainTergores)
+    public function setJumlahItemTergores($jumlahItemTergores)
     {
-        $this->jumlahItemKainTergores = $jumlahItemKainTergores;
+        $this->jumlahItemTergores = $jumlahItemTergores;
     }
 
-    public function getJumlahItemKainTergores()
+    public function getJumlahItemTergores()
     {
-        return $this->jumlahItemKainTergores;
+        return $this->jumlahItemTergores;
     }
 
-    public function setJumlahItemTidakPresisi($jumlahItemTidakPresisi)
+    public function setJumlahItemTerpolusi($jumlahItemTerpolusi)
     {
-        $this->jumlahItemTidakPresisi = $jumlahItemTidakPresisi;
+        $this->jumlahItemTerpolusi = $jumlahItemTerpolusi;
     }
 
-    public function getJumlahItemTidakPresisi()
+    public function getJumlahItemTerpolusi()
     {
-        return $this->jumlahItemTidakPresisi;
-    }
-
-    public function setJumlahItemSalahPosisiLubang($jumlahItemSalahPosisiLubang)
-    {
-        $this->jumlahItemSalahPosisiLubang = $jumlahItemSalahPosisiLubang;
-    }
-
-    public function getJumlahItemSalahPosisiLubang()
-    {
-        return $this->jumlahItemSalahPosisiLubang;
+        return $this->jumlahItemTerpolusi;
     }
 
     public function setJumlahItemSalahUkuran($jumlahItemSalahUkuran)
@@ -165,16 +157,6 @@ class DailyInspectionItem
         return $this->jumlahItemSalahUkuran;
     }
 
-    public function setJumlahItemTergores($jumlahItemTergores)
-    {
-        $this->jumlahItemTergores = $jumlahItemTergores;
-    }
-
-    public function getJumlahItemTergores()
-    {
-        return $this->jumlahItemTergores;
-    }
-
     public function setJumlahItemKelebihanLem($jumlahItemKelebihanLem)
     {
         $this->jumlahItemKelebihanLem = $jumlahItemKelebihanLem;
@@ -183,6 +165,36 @@ class DailyInspectionItem
     public function getJumlahItemKelebihanLem()
     {
         return $this->jumlahItemKelebihanLem;
+    }
+
+    public function setJumlahItemKelebihanCat($jumlahItemKelebihanCat)
+    {
+        $this->jumlahItemKelebihanCat = $jumlahItemKelebihanCat;
+    }
+
+    public function getJumlahItemKelebihanCat()
+    {
+        return $this->jumlahItemKelebihanCat;
+    }
+
+    public function setJumlahItemWarna($jumlahItemWarna)
+    {
+        $this->jumlahItemWarna = $jumlahItemWarna;
+    }
+
+    public function getJumlahItemWarna()
+    {
+        return $this->jumlahItemWarna;
+    }
+
+    public function setJumlahItemBergelembung($jumlahItemBergelembung)
+    {
+        $this->jumlahItemBergelembung = $jumlahItemBergelembung;
+    }
+
+    public function getJumlahItemBergelembung()
+    {
+        return $this->jumlahItemBergelembung;
     }
 
     public function setJumlahItemStrukturLonggar($jumlahItemStrukturLonggar)
@@ -205,14 +217,14 @@ class DailyInspectionItem
         return $this->jumlahItemCoverTerpotong;
     }
 
-    public function setJumlahItemRetak($jumlahItemRetak)
+    public function setJumlahItemArahHorizontal($jumlahItemArahHorizontal)
     {
-        $this->jumlahItemRetak = $jumlahItemRetak;
+        $this->jumlahItemArahHorizontal = $jumlahItemArahHorizontal;
     }
 
-    public function getJumlahItemRetak()
+    public function getJumlahItemArahHorizontal()
     {
-        return $this->jumlahItemRetak;
+        return $this->jumlahItemArahHorizontal;
     }
 
     public function setJumlahItemSandingBuruk($jumlahItemSandingBuruk)
@@ -277,22 +289,22 @@ class DailyInspectionItem
 
     public function getJumlahTotalItemBuruk()
     {
-        $jumlahTotalItemBuruk = $this->jumlahItemKainTergores + $this->jumlahItemTidakPresisi
-            + $this->jumlahItemSalahPosisiLubang + $this->jumlahItemSalahUkuran + $this->jumlahItemTergores
-            + $this->jumlahItemKelebihanLem + $this->jumlahItemStrukturLonggar + $this->jumlahItemCoverTerpotong
-            + $this->jumlahItemRetak + $this->jumlahItemSandingBuruk + $this->jumlahItemPakuKeluar
-            + $this->jumlahItemLemDegumming + $this->jumlahItemGap + $this->jumlahItemBurukLainnya;
+        $jumlahTotalItemBuruk = $this->jumlahItemTergores + $this->jumlahItemTerpolusi + $this->jumlahItemSalahUkuran
+            + $this->jumlahItemKelebihanLem + $this->jumlahItemKelebihanCat + $this->jumlahItemWarna
+            + $this->jumlahItemBergelombang + $this->jumlahItemCoverTerpotong + $this->jumlahItemArahHorizontal
+            + $this->jumlahItemSandingBuruk + $this->jumlahItemPakuKeluar + $this->jumlahItemLemDegumming
+            + $this->jumlahItemGap + $this->jumlahItemBurukLainnya;
 
         return $jumlahTotalItemBuruk;
     }
 
-    public function setDailyInspectionTime(DailyInspectionTime $dailyInspectionTime)
+    public function setFinishingInspectionTime(FinishingInspectionTime $finishingInspectionTime)
     {
-        $this->dailyInspectionTime = $dailyInspectionTime;
+        $this->finishingInspectionTime = $finishingInspectionTime;
     }
 
-    public function getDailyInspectionTime()
+    public function getFinishingInspectionTime()
     {
-        return $this->dailyInspectionTime;
+        return $this->finishingInspectionTime;
     }
 }
