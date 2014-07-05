@@ -1,0 +1,161 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity
+        name="WWII\Domain\Erp\QualityControl\GeneralInspection\WhitewoodInspectionItem"
+        table="qc_general_inspection_whitewood_inspection_item">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="customer"
+            column="customer"
+            type="string" />
+
+        <field
+            name="PO"
+            column="po"
+            type="string" />
+
+        <field
+            name="nomorKerja"
+            column="nomo_kerja"
+            type="string" />
+
+        <field
+            name="kodeProduk"
+            column="kode_produk"
+            type="string" />
+
+        <field
+            name="namaProduk"
+            column="nama_produk"
+            type="string" />
+
+        <field
+            name="inspectionLevel"
+            column="inspection_level"
+            type="string" />
+
+        <field
+            name="acceptanceIndex"
+            column="acceptance_index"
+            type="decimal"
+            scale="2"
+            precicion="2" />
+
+        <field
+            name="jumlahLot"
+            column="jumlah_lot"
+            type="integer" />
+
+        <field
+            name="jumlahInspeksi"
+            column="jumlah_inspeksi"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahProses"
+            column="jumlah_item_salah_proses"
+            type="integer" />
+
+        <field
+            name="jumlahItemKualitasBuruk"
+            column="jumlah_item_kualitas_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemKualitasTidakBenar"
+            column="jumlah_item_kualitas_tidak_benar"
+            type="integer" />
+
+        <field
+            name="jumlahItemPosisiLubangSalah"
+            column="jumlah_item_posisi_lubang_salah"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahUkuran"
+            column="jumlah_item_salah_ukuran"
+            type="integer" />
+
+        <field
+            name="jumlahItemGoresanPisau"
+            column="jumlah_item_goresan_pisau"
+            type="integer" />
+
+        <field
+            name="jumlahItemRobek"
+            column="jumlah_item_robek"
+            type="integer" />
+
+        <field
+            name="jumlahItemRetak"
+            column="jumlah_item_retak"
+            type="integer" />
+
+        <field
+            name="jumlahItemMenjadiHitam"
+            column="jumlah_item_menjadi_hitam"
+            type="integer" />
+
+        <field
+            name="jumlahItemSandingBuruk"
+            column="jumlah_item_sanding_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemGoresanTekanan"
+            column="jumlah_item_goresan_tekanan"
+            type="integer" />
+
+        <field
+            name="jumlahItemPakuKeluar"
+            column="jumlah_item_paku_keluar"
+            type="integer" />
+
+        <field
+            name="jumlahItemAssemblyBuruk"
+            column="jumlah_item_assembly_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemPerbaikanBuruk"
+            column="jumlah_item_perbaikan_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemDegumming"
+            column="jumlah_item_degumming"
+            type="integer" />
+        <field
+            name="jumlahItemKelebihanLem"
+            column="jumlah_item_kelebihan_lem"
+            type="integer" />
+
+        <field
+            name="jumlahItemSuhuTerlaluTinggi"
+            column="jumlah_item_suhu_terlalu_tinggi"
+            type="integer" />
+
+        <field
+            name="jumlahItemBurukLainnya"
+            column="jumlah_item_buruk_lainnya"
+            type="integer" />
+
+        <field
+            name="jumlahItemKekurangan"
+            column="jumlah_item_kekurangan"
+            type="integer" />
+
+        <many-to-one
+            field="whitewoodInspectionTime"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\WhitewoodInspectionTime"
+            inversed-by="whitewoodInspectionItem" />
+
+    </entity>
+</doctrine-mapping>
+
