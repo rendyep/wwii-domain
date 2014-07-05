@@ -18,43 +18,43 @@ class PackagingInspectionItem
 
     protected $jumlahInspeksi;
 
-    protected $jumlahItemSalahFlowProses;
+    protected $jumlahItemSalahFlowProses = 0;
 
-    protected $jumlahItemKualitasBuruk;
+    protected $jumlahItemKualitasBuruk = 0;
 
-    protected $jumlahItemSalahKualitas;
+    protected $jumlahItemSalahKualitas = 0;
 
-    protected $jumlahItemSalahPosisiLubang;
+    protected $jumlahItemSalahPosisiLubang = 0;
 
-    protected $jumlahItemSalahUkuran;
+    protected $jumlahItemSalahUkuran = 0;
 
-    protected $jumlahItemBekasGoresanPisau;
+    protected $jumlahItemBekasGoresanPisau = 0;
 
-    protected $jumlahItemSobek;
+    protected $jumlahItemSobek = 0;
 
-    protected $jumlahItemRetak;
+    protected $jumlahItemRetak = 0;
 
-    protected $jumlahItemHitam;
+    protected $jumlahItemHitam = 0;
 
-    protected $jumlahItemSandingBuruk;
+    protected $jumlahItemSandingBuruk = 0;
 
-    protected $jumlahItemGoresanTekanan;
+    protected $jumlahItemGoresanTekanan = 0;
 
-    protected $jumlahItemPakuKeluar;
+    protected $jumlahItemPakuKeluar = 0;
 
-    protected $jumlahItemBerdiriBuruk;
+    protected $jumlahItemBerdiriBuruk = 0;
 
-    protected $jumlahItemPerbaikanBuruk;
+    protected $jumlahItemPerbaikanBuruk = 0;
 
-    protected $jumlahItemLemDegumming;
+    protected $jumlahItemLemDegumming = 0;
 
-    protected $jumlahItemKelebihanLem;
+    protected $jumlahItemKelebihanLem = 0;
 
-    protected $jumlahItemSuhuTerlaluTinggi;
+    protected $jumlahItemSuhuTerlaluTinggi = 0;
 
-    protected $jumlahItemBurukLainnya;
+    protected $jumlahItemBurukLainnya = 0;
 
-    protected $jumlahItemKekurangan;
+    protected $jumlahItemKekurangan = 0;
 
     protected $packagingInspectionTime;
 

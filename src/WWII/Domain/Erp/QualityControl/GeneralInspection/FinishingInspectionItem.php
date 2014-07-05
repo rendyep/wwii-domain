@@ -18,37 +18,37 @@ class FinishingInspectionItem
 
     protected $jumlahInspeksi;
 
-    protected $jumlahItemTergores;
+    protected $jumlahItemTergores = 0;
 
-    protected $jumlahItemTerpolusi;
+    protected $jumlahItemTerpolusi = 0;
 
-    protected $jumlahItemSalahUkuran;
+    protected $jumlahItemSalahUkuran = 0;
 
-    protected $jumlahItemKelebihanLem;
+    protected $jumlahItemKelebihanLem = 0;
 
-    protected $jumlahItemKelebihanCat;
+    protected $jumlahItemKelebihanCat = 0;
 
-    protected $jumlahItemWarna;
+    protected $jumlahItemWarna = 0;
 
-    protected $jumlahItemBergelembung;
+    protected $jumlahItemBergelembung = 0;
 
-    protected $jumlahItemStrukturLonggar;
+    protected $jumlahItemStrukturLonggar = 0;
 
-    protected $jumlahItemCoverTerpotong;
+    protected $jumlahItemCoverTerpotong = 0;
 
-    protected $jumlahItemArahHorizontal;
+    protected $jumlahItemArahHorizontal = 0;
 
-    protected $jumlahItemSandingBuruk;
+    protected $jumlahItemSandingBuruk = 0;
 
-    protected $jumlahItemPakuKeluar;
+    protected $jumlahItemPakuKeluar = 0;
 
-    protected $jumlahItemLemDegumming;
+    protected $jumlahItemLemDegumming = 0;
 
-    protected $jumlahItemGap;
+    protected $jumlahItemGap = 0;
 
-    protected $jumlahItemBurukLainnya;
+    protected $jumlahItemBurukLainnya = 0;
 
-    protected $jumlahItemKekurangan;
+    protected $jumlahItemKekurangan = 0;
 
     protected $finishingInspectionTime;
 

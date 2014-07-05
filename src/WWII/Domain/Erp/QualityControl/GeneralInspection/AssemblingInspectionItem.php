@@ -18,35 +18,35 @@ class AssemblingInspectionItem
 
     protected $jumlahInspeksi;
 
-    protected $jumlahItemKainTergores;
+    protected $jumlahItemKainTergores = 0;
 
-    protected $jumlahItemTidakPresisi;
+    protected $jumlahItemTidakPresisi = 0;
 
-    protected $jumlahItemSalahPosisiLubang;
+    protected $jumlahItemSalahPosisiLubang = 0;
 
-    protected $jumlahItemSalahUkuran;
+    protected $jumlahItemSalahUkuran = 0;
 
-    protected $jumlahItemTergores;
+    protected $jumlahItemTergores = 0;
 
-    protected $jumlahItemKelebihanLem;
+    protected $jumlahItemKelebihanLem = 0;
 
-    protected $jumlahItemStrukturLonggar;
+    protected $jumlahItemStrukturLonggar = 0;
 
-    protected $jumlahItemCoverTerpotong;
+    protected $jumlahItemCoverTerpotong = 0;
 
-    protected $jumlahItemRetak;
+    protected $jumlahItemRetak = 0;
 
-    protected $jumlahItemSandingBuruk;
+    protected $jumlahItemSandingBuruk = 0;
 
-    protected $jumlahItemPakuKeluar;
+    protected $jumlahItemPakuKeluar = 0;
 
-    protected $jumlahItemLemDegumming;
+    protected $jumlahItemLemDegumming = 0;
 
-    protected $jumlahItemGap;
+    protected $jumlahItemGap = 0;
 
-    protected $jumlahItemBurukLainnya;
+    protected $jumlahItemBurukLainnya = 0;
 
-    protected $jumlahItemKekurangan;
+    protected $jumlahItemKekurangan = 0;
 
     protected $assemblingInspectionTime;
 
