@@ -8,7 +8,7 @@ class PembahananPanelInspection
 
     protected $tanggalInspeksi;
 
-    protected $line;
+    protected $lokasi;
 
     protected $staffQc;
 

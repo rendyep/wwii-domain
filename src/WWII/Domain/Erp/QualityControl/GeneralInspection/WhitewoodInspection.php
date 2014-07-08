@@ -8,7 +8,7 @@ class WhitewoodInspection
 
     protected $tanggalInspeksi;
 
-    protected $line;
+    protected $lokasi;
 
     protected $staffQc;
 
@@ -34,14 +34,14 @@ class WhitewoodInspection
         return $this->tanggalInspeksi;
     }
 
-    public function setLine($line)
+    public function setLokasi($lokasi)
     {
-        $this->line = $line;
+        $this->lokasi = $lokasi;
     }
 
-    public function getLine()
+    public function getLokasi()
     {
-        return $this->line;
+        return $this->lokasi;
     }
 
     public function setStaffQc($staffQc)

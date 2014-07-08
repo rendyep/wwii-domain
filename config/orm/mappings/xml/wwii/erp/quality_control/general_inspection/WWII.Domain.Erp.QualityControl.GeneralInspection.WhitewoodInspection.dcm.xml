@@ -16,8 +16,8 @@
             type="date" />
 
         <field
-            name="line"
-            column="line"
+            name="lokasi"
+            column="lokasi"
             type="string" />
 
         <field
