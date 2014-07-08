@@ -1,0 +1,242 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+
+    <entity
+        name="WWII\Domain\Erp\QualityControl\GeneralInspection\PembahananPanelInspectionItem"
+        table="qc_general_inspection_pembahanan_panel_inspection_item">
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field
+            name="customer"
+            column="customer"
+            type="string" />
+
+        <field
+            name="PO"
+            column="PO"
+            type="string" />
+
+        <field
+            name="nomorKerja"
+            column="nomokerja"
+            type="string" />
+
+        <field
+            name="kodeProduk"
+            column="kode_produk"
+            type="string" />
+
+        <field
+            name="namaProduk"
+            column="nama_produk"
+            type="string" />
+
+        <field
+            name="inspectionLevel"
+            column="inspectionLevel"
+            type="string" />
+
+        <field
+            name="acceptanceIndex"
+            column="acceptance_index"
+            type="decimal"
+            scale="2"
+            precicion="2" />
+
+        <field
+            name="jumlahLot"
+            column="jumlah_lot"
+            type="integer" />
+
+        <field
+            name="jumlahInspeksi"
+            column="jumlah_inspeksi"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahPerakitan"
+            column="jumlah_item_salah_perakitan"
+            type="integer" />
+
+        <field
+            name="jumlahItemMaterial"
+            column="jumlah_item_material"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahMaterial"
+            column="jumlah_item_salah_material"
+            type="integer" />
+
+        <field
+            name="jumlahItemArahBungaVeneerSalah"
+            column="jumlah_item_arah_bunga_veneer_salah"
+            type="integer" />
+
+        <field
+            name="jumlahItemSalahUkuran"
+            column="jumlah_item_salah_ukuran"
+            type="integer" />
+
+        <field
+            name="jumlahItemRonggaGap"
+            column="jumlah_item_rongga_gap"
+            type="integer" />
+
+        <field
+            name="jumlahItemGoresanPisau"
+            column="jumlah_item_goresan_pisau"
+            type="integer" />
+
+        <field
+            name="jumlahItemLengkunganTidakSama"
+            column="jumlah_item_lengkungan_tidak_sama"
+            type="integer" />
+
+        <field
+            name="jumlahItemRetak"
+            column="jumlah_item_retak"
+            type="integer" />
+
+        <field
+            name="jumlahItemMenjadiHitam"
+            column="jumlah_item_menjadi_hitam"
+            type="integer" />
+
+        <field
+            name="jumlahItemSandingBuruk"
+            column="jumlah_item_sanding_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemTekananTidak"
+            column="jumlah_item_tekanan_tidak"
+            type="integer" />
+
+        <field
+            name="jumlahItemPotonganCuwil"
+            column="jumlah_item_potongan_cuwil"
+            type="integer" />
+
+        <field
+            name="jumlahItemAssemblyBuruk"
+            column="jumlah_item_assembly_buruk"
+            type="integer" />
+
+        <field
+            name="jumlahItemKesikuanSudut"
+            column="jumlah_item_kesikuan_sudut"
+            type="integer" />
+
+        <field
+            name="jumlahItemDegumming"
+            column="jumlah_item_degumming"
+            type="integer" />
+
+        <field
+            name="jumlahItemKelebihanLem"
+            column="jumlah_item_kelebihan_lem"
+            type="integer" />
+
+        <field
+            name="jumlahItemKurangLem"
+            column="jumlah_item_kurang_lem"
+            type="integer" />
+
+        <field
+            name="jumlahItemBurukLainnya"
+            column="jumlah_item_buruk_lainnya"
+            type="integer" />
+
+        <field
+            name="jumlahItemKurangPanjang"
+            column="jumlah_item_kurangPanjang"
+            type="integer" />
+
+        <field
+            name="jumlahItemKurangLebar"
+            column="jumlah_item_kurang_lebar"
+            type="integer" />
+
+        <field
+            name="jumlahItemPanjangLebih"
+            column="jumlah_item_panjang_lebih"
+            type="integer" />
+
+        <field
+            name="jumlahItemLebarLebih"
+            column="jumlah_item_lebar_lebih"
+            type="integer" />
+
+        <field
+            name="jumlahItemCutterMark"
+            column="jumlah_item_cutter_mark"
+            type="integer" />
+
+        <field
+            name="jumlahItemPotonganTidakSiku"
+            column="jumlah_item_potongan_tidak_siku"
+            type="integer" />
+
+        <field
+            name="jumlahItemLetakAlurSalah"
+            column="jumlah_item_letak_alur_salah"
+            type="integer" />
+
+        <field
+            name="jumlahItemKurangTebal"
+            column="jumlah_item_kurang_tebal"
+            type="integer" />
+
+        <field
+            name="jumlahItemKurangTipis"
+            column="jumlah_item_kurang_tipis"
+            type="integer" />
+
+        <field
+            name="jumlahItemMaterialGelombang"
+            column="jumlah_item_material_gelombang"
+            type="integer" />
+
+        <field
+            name="jumlahItemListTidakSama"
+            column="jumlah_item_list_tidak_sama"
+            type="integer" />
+
+        <field
+            name="jumlahItemTekananTidakMaksimal"
+            column="jumlah_item_tekanana_tidak_maksimal"
+            type="integer" />
+
+        <field
+            name="jumlahItemGelombang"
+            column="jumlah_item_gelombang"
+            type="integer" />
+
+        <field
+            name="jumlahItemRakitanTerbalik"
+            column="jumlah_item_rakitan_terbalik"
+            type="integer" />
+
+        <field
+            name="jumlahItemOverSending"
+            column="jumlah_item_over_sending"
+            type="integer" />
+
+        <field
+            name="jumlahItemKurangSending"
+            column="jumlah_item_kurang_sending"
+            type="integer" />
+
+        <many-to-one
+            field="pembahananPanelInspectionTime"
+            target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\PembahananPanelInspectionTime"
+            inversed-by="pembahananPanelInspectionItem" />
+
+    </entity>
+</doctrine-mapping>
+
