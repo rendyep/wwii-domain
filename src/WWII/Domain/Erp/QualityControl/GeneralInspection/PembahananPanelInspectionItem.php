@@ -10,8 +10,6 @@ class PembahananPanelInspectionItem
 
     protected $PO;
 
-    protected $nomorKerja;
-
     protected $kodeProduk;
 
     protected $namaProduk;
@@ -129,16 +127,6 @@ class PembahananPanelInspectionItem
     public function getPO()
     {
         return $this->PO;
-    }
-
-    public function setNomorKerja($nomorKerja)
-    {
-        $this->nomorKerja = $nomorKerja;
-    }
-
-    public function getNomorKerja()
-    {
-        return $this->nomorKerja;
     }
 
     public function setKodeProduk($kodeProduk)

@@ -21,11 +21,6 @@
             type="string" />
 
         <field
-            name="nomorKerja"
-            column="nomokerja"
-            type="string" />
-
-        <field
             name="kodeProduk"
             column="kode_produk"
             type="string" />
