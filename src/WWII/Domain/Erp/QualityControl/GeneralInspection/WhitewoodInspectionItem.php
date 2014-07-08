@@ -99,16 +99,6 @@ class WhitewoodInspectionItem
         return $this->PO;
     }
 
-    public function setNomorKerja($nomorKerja)
-    {
-        $this->nomorKerja = $nomorKerja;
-    }
-
-    public function getNomorKerja()
-    {
-        return $this->nomorKerja;
-    }
-
     public function setKodeProduk($kodeProduk)
     {
         $this->kodeProduk = $kodeProduk;
