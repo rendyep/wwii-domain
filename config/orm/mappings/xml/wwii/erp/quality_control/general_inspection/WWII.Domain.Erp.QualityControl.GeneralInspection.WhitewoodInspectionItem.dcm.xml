@@ -146,11 +146,6 @@
             column="jumlah_item_buruk_lainnya"
             type="integer" />
 
-        <field
-            name="jumlahItemKekurangan"
-            column="jumlah_item_kekurangan"
-            type="integer" />
-
         <many-to-one
             field="whitewoodInspectionTime"
             target-entity="WWII\Domain\Erp\QualityControl\GeneralInspection\WhitewoodInspectionTime"

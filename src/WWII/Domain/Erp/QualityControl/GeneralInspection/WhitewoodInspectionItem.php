@@ -62,8 +62,6 @@ class WhitewoodInspectionItem
 
     protected $jumlahItemBurukLainnya = 0;
 
-    protected $jumlahItemKekurangan = 0;
-
     protected $whitewoodInspectionTime;
 
     public function getId()
@@ -231,14 +229,14 @@ class WhitewoodInspectionItem
         return $this->jumlahItemSalahJenisPisau;
     }
 
-    public function setJumlahItemGoresanPisau($jumlahGoresanPisau)
+    public function setJumlahItemGoresanPisau($jumlahItemGoresanPisau)
     {
-        $this->jumlahGoresanPisau = $jumlahGoresanPisau;
+        $this->jumlahItemGoresanPisau = $jumlahItemGoresanPisau;
     }
 
-    public function getJumlahGoresanPisau()
+    public function getJumlahItemGoresanPisau()
     {
-        return $this->jumlahGoresanPisau;
+        return $this->jumlahItemGoresanPisau;
     }
 
     public function setJumlahItemRobek($jumlahItemRobek)
@@ -359,16 +357,6 @@ class WhitewoodInspectionItem
     public function getJumlahItemBurukLainnya()
     {
         return $this->jumlahItemBurukLainnya;
-    }
-
-    public function setJumlahItemKekurangan($jumlahItemKekurangan)
-    {
-        $this->jumlahItemKekurangan = $jumlahItemKekurangan;
-    }
-
-    public function getJumlahItemKekurangan()
-    {
-        return $this->jumlahItemKekurangan;
     }
 
     public function getJumlahTotalItemBuruk()
