@@ -191,7 +191,7 @@ class PembahananPanelInspectionItem
 
     public function setJumlahItemSalahPerakitan($jumlahItemSalahPerakitan)
     {
-        $this->jumlahItem = $jumlahItemSalahPerakitan;
+        $this->jumlahItemSalahPerakitan = $jumlahItemSalahPerakitan;
     }
 
     public function getJumlahItemSalahPerakitan()
@@ -259,12 +259,12 @@ class PembahananPanelInspectionItem
         return $this->jumlahItemGoresanPisau;
     }
 
-    public function setJumlahItemLengkungTidakSama($jumlahItemLengkunganTidakSama)
+    public function setJumlahItemLengkunganTidakSama($jumlahItemLengkunganTidakSama)
     {
         $this->jumlahItemLengkunganTidakSama = $jumlahItemLengkunganTidakSama;
     }
 
-    public function getJumlahItemLengkungTidakSama()
+    public function getJumlahItemLengkunganTidakSama()
     {
         return $this->jumlahItemLengkunganTidakSama;
     }
@@ -359,14 +359,14 @@ class PembahananPanelInspectionItem
         return $this->jumlahItemKelebihanLem;
     }
 
-    public function setJumlahItemKekuranganLem($jumlahItemKekuranganLem)
+    public function setJumlahItemKurangLem($jumlahItemKurangLem)
     {
-        $this->jumlahItemKekuranganLem = $jumlahItemKekuranganLem;
+        $this->jumlahItemKurangLem = $jumlahItemKurangLem;
     }
 
-    public function getJumlahItemKekuranganLem()
+    public function getJumlahItemKurangLem()
     {
-        return $this->jumlahItemKekuranganLem;
+        return $this->jumlahItemKurangLem;
     }
 
     public function setJumlahItemBurukLainnya($jumlahItemBurukLainnya)
@@ -469,14 +469,14 @@ class PembahananPanelInspectionItem
         return $this->jumlahItemKurangTipis;
     }
 
-    public function setJumlahItemMaterialBergelombang($jumlahItematerialBergelombang)
+    public function setJumlahItemMaterialGelombang($jumlahItemMaterialGelombang)
     {
-        $this->jumlahItemMaterialBergelombang = $jumlahItemMaterialBergelombang;
+        $this->jumlahItemMaterialGelombang = $jumlahItemMaterialGelombang;
     }
 
-    public function getJumlahItemMaterialBergelombang()
+    public function getJumlahItemMaterialGelombang()
     {
-        return $this->jumlahItemMaterialBergelombang;
+        return $this->jumlahItemMaterialGelombang;
     }
 
     public function setJumlahItemListTidakSama($jumlahItemListTidakSama)
@@ -509,7 +509,7 @@ class PembahananPanelInspectionItem
         return $this->jumlahItemGelombang;
     }
 
-    public function setJumlahItemRakitakTerbalik($jumlahItemRakitanTerbalik)
+    public function setJumlahItemRakitanTerbalik($jumlahItemRakitanTerbalik)
     {
         $this->jumlahItemRakitanTerbalik = $jumlahItemRakitanTerbalik;
     }
@@ -547,10 +547,10 @@ class PembahananPanelInspectionItem
             + $this->jumlahItemRetak + $this->jumlahItemMenjadiHitam + $this->jumlahItemSandingBuruk
             + $this->jumlahItemTekananTidak + $this->jumlahItemPotonganCuwil + $this->jumlahItemAssemblyBuruk
             + $this->jumlahItemKesikuanSudut + $this->jumlahItemDegumming + $this->jumlahItemKelebihanLem
-            + $this->jumlahItemKekuranganLem + $this->jumlahItemBurukLainnya + $this->jumlahItemKurangPanjang
+            + $this->jumlahItemKurangLem + $this->jumlahItemBurukLainnya + $this->jumlahItemKurangPanjang
             + $this->jumlahItemKurangLebar + $this->jumlahItemPanjangLebih + $this->jumlahItemLebarLebih
             + $this->jumlahItemCutterMark + $this->jumlahItemPotonganTidakSiku + $this->jumlahItemLetakAlurSalah
-            + $this->jumlahItemKurangTebal + $this->jumlahItemKurangTipis + $this->jumlahItemMaterialBergelombang
+            + $this->jumlahItemKurangTebal + $this->jumlahItemKurangTipis + $this->jumlahItemMaterialGelombang
             + $this->jumlahItemListTidakSama + $this->jumlahItemTekananTidakMaksimal + $this->jumlahItemGelombang
             + $this->jumlahItemRakitanTerbalik + $this->jumlahItemOverSending + $this->jumlahItemKurangSending;
 
