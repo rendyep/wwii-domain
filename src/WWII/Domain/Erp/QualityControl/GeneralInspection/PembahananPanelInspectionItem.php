@@ -24,7 +24,9 @@ class PembahananPanelInspectionItem
 
     protected $jumlahItemSalahPerakitan = 0;
 
-    protected $jumlahItemMaterial = 0;
+    protected $jumlahItemMaterialLubangRusak = 0;
+
+    protected $jumlahItemSalahMaterialLubangRusak = 0;
 
     protected $jumlahItemSalahMaterial = 0;
 
@@ -44,13 +46,13 @@ class PembahananPanelInspectionItem
 
     protected $jumlahItemSandingBuruk = 0;
 
-    protected $jumlahItemTekananTidak = 0;
+    protected $jumlahItemTekananTidakMaksimal = 0;
 
     protected $jumlahItemPotonganCuwil = 0;
 
     protected $jumlahItemAssemblyBuruk = 0;
 
-    protected $jumlahItemKesikuanSudut = 0;
+    protected $jumlahItemKesikuanSudutTidakSama = 0;
 
     protected $jumlahItemDegumming = 0;
 
@@ -81,8 +83,6 @@ class PembahananPanelInspectionItem
     protected $jumlahItemMaterialGelombang = 0;
 
     protected $jumlahItemListTidakSama = 0;
-
-    protected $jumlahItemTekananTidakMaksimal = 0;
 
     protected $jumlahItemGelombang = 0;
 
@@ -199,14 +199,14 @@ class PembahananPanelInspectionItem
         return $this->jumlahItemSalahPerakitan;
     }
 
-    public function setJumlahItemMaterial($jumlahItemMaterial)
+    public function setJumlahItemMaterialLubangRusak($jumlahItemMaterialLubangRusak)
     {
-        $this->jumlahItemMaterial = $jumlahItemMaterial;
+        $this->jumlahItemMaterialLubangRusak = $jumlahItemMaterialLubangRusak;
     }
 
-    public function getJumlahItemMaterial()
+    public function getJumlahItemMaterialLubangRusak()
     {
-        return $this->jumlahItemMaterial;
+        return $this->jumlahItemMaterialLubangRusak;
     }
 
     public function setJumlahItemSalahMaterial($jumlahItemSalahMaterial)
@@ -299,14 +299,14 @@ class PembahananPanelInspectionItem
         return $this->jumlahItemSandingBuruk;
     }
 
-    public function setJumlahItemTekananTidak($jumlahItemTekananTidak)
+    public function setJumlahItemTekananTidakMaksimal($jumlahItemTekananTidakMaksimal)
     {
-        $this->jumlahItemTekananTidak = $jumlahItemTekananTidak;
+        $this->jumlahItemTekananTidakMaksimal = $jumlahItemTekananTidakMaksimal;
     }
 
-    public function getJumlahItemTekananTidak()
+    public function getJumlahItemTekananTidakMaksimal()
     {
-        return $this->jumlahItemTekananTidak;
+        return $this->jumlahItemTekananTidakMaksimal;
     }
 
     public function setJumlahItemPotonganCuwil($jumlahItemPotonganCuwil)
@@ -329,14 +329,14 @@ class PembahananPanelInspectionItem
         return $this->jumlahItemAssemblyBuruk;
     }
 
-    public function setJumlahItemKesikuanSudut($jumlahItemKesikuanSudut)
+    public function setJumlahItemKesikuanSudutTidakSama($jumlahItemKesikuanSudutTidakSama)
     {
-        $this->jumlahItemKesikuanSudut = $jumlahItemKesikuanSudut;
+        $this->jumlahItemKesikuanSudutTidakSama = $jumlahItemKesikuanSudutTidakSama;
     }
 
-    public function getJumlahItemKesikuanSudut()
+    public function getJumlahItemKesikuanSudutTidakSama()
     {
-        return $this->jumlahItemKesikuanSudut;
+        return $this->jumlahItemKesikuanSudutTidakSama;
     }
 
     public function setJumlahItemDegumming($jumlahItemDegumming)
@@ -489,16 +489,6 @@ class PembahananPanelInspectionItem
         return $this->jumlahItemListTidakSama;
     }
 
-    public function setJumlahItemTekananTidakMaksimal($jumlahItemTekananTidakMaksimal)
-    {
-        $this->jumlahItemTekananTidakMaksimal = $jumlahItemTekananTidakMaksimal;
-    }
-
-    public function getJumlahItemTekananTidakMaksimal()
-    {
-        return $this->jumlahItemTekananTidakMaksimal;
-    }
-
     public function setJumlahItemGelombang($jumlahItemGelombang)
     {
         $this->jumlahItemGelombang = $jumlahItemGelombang;
@@ -541,18 +531,18 @@ class PembahananPanelInspectionItem
 
     public function getJumlahTotalItemBuruk()
     {
-        $jumlahTotalItemBuruk = $this->jumlahItemSalahPerakitan + $this->jumlahItemMaterial
+        $jumlahTotalItemBuruk = $this->jumlahItemSalahPerakitan + $this->jumlahItemMaterialLubangRusak
             + $this->jumlahItemSalahMaterial + $this->jumlahItemArahBungaVeneerSalah + $this->jumlahItemSalahUkuran
             + $this->jumlahItemRonggaGap + $this->jumlahItemGoresanPisau + $this->jumlahItemLengkunganTidakSama
             + $this->jumlahItemRetak + $this->jumlahItemMenjadiHitam + $this->jumlahItemSandingBuruk
-            + $this->jumlahItemTekananTidak + $this->jumlahItemPotonganCuwil + $this->jumlahItemAssemblyBuruk
-            + $this->jumlahItemKesikuanSudut + $this->jumlahItemDegumming + $this->jumlahItemKelebihanLem
+            + $this->jumlahItemTekananTidakMaksimal + $this->jumlahItemPotonganCuwil + $this->jumlahItemAssemblyBuruk
+            + $this->jumlahItemKesikuanSudutTidakSama + $this->jumlahItemDegumming + $this->jumlahItemKelebihanLem
             + $this->jumlahItemKurangLem + $this->jumlahItemBurukLainnya + $this->jumlahItemKurangPanjang
             + $this->jumlahItemKurangLebar + $this->jumlahItemPanjangLebih + $this->jumlahItemLebarLebih
             + $this->jumlahItemCutterMark + $this->jumlahItemPotonganTidakSiku + $this->jumlahItemLetakAlurSalah
             + $this->jumlahItemKurangTebal + $this->jumlahItemKurangTipis + $this->jumlahItemMaterialGelombang
-            + $this->jumlahItemListTidakSama + $this->jumlahItemTekananTidakMaksimal + $this->jumlahItemGelombang
-            + $this->jumlahItemRakitanTerbalik + $this->jumlahItemOverSending + $this->jumlahItemKurangSending;
+            + $this->jumlahItemListTidakSama + $this->jumlahItemGelombang + $this->jumlahItemRakitanTerbalik
+            + $this->jumlahItemOverSending + $this->jumlahItemKurangSending;
 
         return $jumlahTotalItemBuruk;
     }

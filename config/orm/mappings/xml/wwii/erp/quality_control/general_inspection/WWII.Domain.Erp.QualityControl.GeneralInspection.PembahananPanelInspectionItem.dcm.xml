@@ -58,8 +58,8 @@
             type="integer" />
 
         <field
-            name="jumlahItemMaterial"
-            column="jumlah_item_material"
+            name="jumlahItemMaterialLubangRusak"
+            column="jumlah_item_material_lubang_rusak"
             type="integer" />
 
         <field
@@ -108,8 +108,8 @@
             type="integer" />
 
         <field
-            name="jumlahItemTekananTidak"
-            column="jumlah_item_tekanan_tidak"
+            name="jumlahItemTekananTidakMaksimal"
+            column="jumlah_item_tekanan_tidak_maksimal"
             type="integer" />
 
         <field
@@ -123,8 +123,8 @@
             type="integer" />
 
         <field
-            name="jumlahItemKesikuanSudut"
-            column="jumlah_item_kesikuan_sudut"
+            name="jumlahItemKesikuanSudutTidakSama"
+            column="jumlah_item_kesikuan_sudut_tidak_sama"
             type="integer" />
 
         <field
@@ -200,11 +200,6 @@
         <field
             name="jumlahItemListTidakSama"
             column="jumlah_item_list_tidak_sama"
-            type="integer" />
-
-        <field
-            name="jumlahItemTekananTidakMaksimal"
-            column="jumlah_item_tekanana_tidak_maksimal"
             type="integer" />
 
         <field
